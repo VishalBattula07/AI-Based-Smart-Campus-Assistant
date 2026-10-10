@@ -1,0 +1,222 @@
+/* ==========================================================================
+   CampusIQ Design System Tokens & Dynamic Multi-Theme System
+   ========================================================================== */
+
+/* 1. Default Theme: Modern Indigo SaaS */
+:root,
+[data-theme="indigo"] {
+  --color-primary: #4338CA;        /* Deep Indigo */
+  --color-primary-hover: #3730A3;
+  --color-primary-light: #EEF2FF;
+  --color-accent: #8B5CF6;         /* Violet */
+  --color-accent-light: #F5F3FF;
+  --color-accent-hover: #7C3AED;
+
+  --color-bg: #F7F8FC;             /* Soft off-white */
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  --color-surface-subtle: #F1F5F9;
+
+  --color-text-main: #172033;      /* Dark Navy */
+  --color-text-secondary: #64748B; /* Slate Gray */
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #FFFFFF;
+
+  --color-success: #10B981;
+  --color-success-light: #ECFDF5;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FFFBEB;
+  --color-danger: #EF4444;
+  --color-danger-light: #FEF2F2;
+  --color-info: #0284C7;
+  --color-info-light: #F0F9FF;
+
+  --border-subtle: #E2E8F0;
+  --border-focus: #8B5CF6;
+
+  --card-gradient: linear-gradient(135deg, #FFFFFF 0%, #F5F3FF 100%);
+  --sidebar-bg: #FFFFFF;
+  --navbar-bg: #FFFFFF;
+  --chat-bg: #FAFAFC;
+}
+
+/* 2. Theme 2: Cyber Obsidian (Deep Dark Mode with Electric Neon Accents) */
+[data-theme="dark"] {
+  --color-primary: #6366F1;        /* Electric Indigo */
+  --color-primary-hover: #818CF8;
+  --color-primary-light: rgba(99, 102, 241, 0.16);
+  --color-accent: #A855F7;         /* Radiant Neon Purple */
+  --color-accent-light: rgba(168, 85, 247, 0.16);
+  --color-accent-hover: #C084FC;
+
+  --color-bg: #0B0F19;             /* Deep Cosmic Obsidian */
+  --color-surface: #111827;        /* Sleek card surface */
+  --color-surface-hover: #1F2937;
+  --color-surface-subtle: #1E293B;
+
+  --color-text-main: #F8FAFC;      /* Crisp pure white */
+  --color-text-secondary: #94A3B8; /* Muted slate */
+  --color-text-muted: #64748B;
+  --color-text-inverse: #0B0F19;
+
+  --color-success: #10B981;
+  --color-success-light: rgba(16, 185, 129, 0.18);
+  --color-warning: #F59E0B;
+  --color-warning-light: rgba(245, 158, 11, 0.18);
+  --color-danger: #F43F5E;
+  --color-danger-light: rgba(244, 63, 94, 0.18);
+  --color-info: #38BDF8;
+  --color-info-light: rgba(56, 189, 248, 0.18);
+
+  --border-subtle: #1F2937;
+  --border-focus: #A855F7;
+
+  --card-gradient: linear-gradient(135deg, #111827 0%, #1E1B4B 100%);
+  --sidebar-bg: #0D1322;
+  --navbar-bg: #0D1322;
+  --chat-bg: #080D1A;
+}
+
+/* 3. Theme 3: Emerald Ivy League (Modern Prestige Campus) */
+[data-theme="emerald"] {
+  --color-primary: #047857;        /* Deep Emerald */
+  --color-primary-hover: #065F46;
+  --color-primary-light: #ECFDF5;
+  --color-accent: #059669;         /* Vibrant Mint Green */
+  --color-accent-light: #D1FAE5;
+  --color-accent-hover: #10B981;
+
+  --color-bg: #F4F7F5;             /* Warm tinted background */
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F0FDF4;
+  --color-surface-subtle: #E8F5E9;
+
+  --color-text-main: #06281E;      /* Rich dark botanical */
+  --color-text-secondary: #4B6358;
+  --color-text-muted: #839E92;
+  --color-text-inverse: #FFFFFF;
+
+  --color-success: #059669;
+  --color-success-light: #ECFDF5;
+  --color-warning: #D97706;
+  --color-warning-light: #FEF3C7;
+  --color-danger: #DC2626;
+  --color-danger-light: #FEE2E2;
+  --color-info: #0284C7;
+  --color-info-light: #E0F2FE;
+
+  --border-subtle: #DDE5E0;
+  --border-focus: #059669;
+
+  --card-gradient: linear-gradient(135deg, #FFFFFF 0%, #ECFDF5 100%);
+  --sidebar-bg: #FFFFFF;
+  --navbar-bg: #FFFFFF;
+  --chat-bg: #F2F7F4;
+}
+
+/* Shared Dimensions, Radii, Shadows, Typography */
+:root {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.07), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* General Layout helpers */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg);
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.content-viewport {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px 40px;
+}
+
+@media (max-width: 768px) {
+  .content-viewport {
+    padding: 18px 16px 28px;
+  }
+}
