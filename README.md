@@ -1,6 +1,30 @@
-# AI-Based Smart Campus Assistant (CampusIQ)
+# AI-Based Smart Campus Assistant (CampusIQ) — Full Stack Repository
 
-A modern, SaaS-inspired **AI-Based Smart Campus Assistant** built as a final-year B.Tech Capstone Project. The system integrates university services (timetable, attendance tracking, examination halls, faculty directories, campus circulars) with an autonomous AI copilot.
+A complete, production-ready full-stack university portal combining a **Spring Boot REST API backend** with an **autonomous AI-powered React frontend**.
+
+---
+
+## 📁 Unified Repository Structure
+
+```
+smart-campus/
+├── backend/                       # Spring Boot 3 + Java 17 REST API Service
+│   ├── src/main/java/             # Controllers, JPA Models, Repositories, Security
+│   ├── src/main/resources/        # application.properties (H2 & MySQL configs)
+│   └── pom.xml                    # Maven dependency management
+│
+├── src/                           # React 19 Frontend Application
+│   ├── components/                # Navbar, Sidebar, Multi-Theme Switcher
+│   ├── context/                   # AuthContext, ThemeContext
+│   ├── pages/                     # Dashboard, AI Copilot, Timetable, Attendance...
+│   ├── services/                  # api.js (Axios), campusService.js
+│   └── index.css                  # Modern Design System Tokens
+│
+├── public/                        # Static assets & SVG icons
+├── package.json                   # Vite & React dependencies
+├── vercel.json                    # Single Page App routing configuration
+└── README.md
+```
 
 ---
 
@@ -18,54 +42,33 @@ A modern, SaaS-inspired **AI-Based Smart Campus Assistant** built as a final-yea
   - **Indigo SaaS**: Clean, modern enterprise university portal.
   - **Cyber Dark Obsidian**: High-contrast, sleek cyberpunk dark mode for low-light environments.
   - **Emerald Ivy League**: Prestigious university aesthetic with rich forest tones.
-- **Role-Aware Portals**:
-  - **Student View**: Timetable, Attendance (75% cutoff compliance), Examinations, Faculty Directory, Events, Announcements, Facilities.
-  - **Faculty Workspace**: Course rosters, lecture schedules, and attendance marking.
-  - **Administration Portal**: Student management table with creation/deletion dialogues and system KPI tracking.
+- **Spring Boot 3 REST Backend**:
+  - REST controllers for Timetables, Attendance, Exams, Faculty, Announcements, and AI chat.
+  - Spring Data JPA with zero-config in-memory H2 database & MySQL support.
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Running the Full Project
 
-- **Frontend**: React 19, Vite, React Router v7, Lucide Icons, Modern CSS Design System Tokens
-- **Backend Architecture**: RESTful API service abstraction (`axios`) designed for Spring Boot / Node.js
-- **Database / Entities**: Structured academic models for students, faculties, timetables, exams, and attendance
+### 1. Start Frontend (React + Vite)
+```bash
+# In the root directory:
+npm install
+npm run dev
+```
+Runs at: **http://localhost:5173/**
 
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18.0.0 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/AI-Based-Smart-Campus-Assistant.git
-   cd AI-Based-Smart-Campus-Assistant
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+### 2. Start Backend (Spring Boot 3)
+```bash
+# In the backend directory:
+cd backend
+mvn spring-boot:run
+```
+Runs at: **http://localhost:8080/api**  
+H2 Database Console: **http://localhost:8080/h2-console**
 
 ---
 
 ## 🔒 Security & Privacy
 
-- No sensitive API keys or credentials are hardcoded into frontend client bundles.
-- `.gitignore` is pre-configured to strictly ignore `.env` files, build output (`dist/`), and `node_modules/`.
+- All sensitive credentials, build outputs (`dist/`, `target/`), and dependencies (`node_modules/`) are safely excluded by `.gitignore`.

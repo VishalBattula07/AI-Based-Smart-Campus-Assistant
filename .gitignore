@@ -7,12 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependency directories
+# Node Frontend Dependency directories & output
 node_modules/
-
-# Production build output
 dist/
 dist-ssr/
+
+# Java Backend target & build directories
+backend/target/
+target/
+*.class
+*.jar
+*.war
 
 # Environment variables & secrets (CRITICAL)
 .env
@@ -31,12 +36,10 @@ dist-ssr/
 *.sw?
 .DS_Store
 Thumbs.db
+backend/.idea/
+backend/*.iml
 
-# Backend & Database artifacts (if placed in repo)
-target/
-*.class
-*.jar
-*.war
+# Database artifacts
 *.db
 *.sqlite
 *.sql.dump
